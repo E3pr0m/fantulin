@@ -14,22 +14,11 @@ WordPress site running on [Local by Flywheel](https://localwp.com/).
 2. Restore the database from a dump (not tracked in this repo).
 3. Copy `public/wp-config.php` from a team member or create one from `public/wp-config-sample.php`.
 
-## Theme development
-
-```bash
-cd public/wp-content/themes/twentytwentyfive
-npm install
-npm run build   # compiles style.css → style.min.css
-npm run watch   # watch mode
-```
-
-Requires Node ≥ 20.10.0.
-
 ## What is tracked
 
-Only non-core WordPress content is versioned:
+Only custom, non-core WordPress content is versioned:
 
-- `public/wp-content/themes/twentytwentyfive/` – active theme
+- `public/wp-content/themes/<custom-theme>/` – custom themes (default themes are ignored)
 - `public/wp-content/plugins/` – custom plugins
 - `public/wp-content/mu-plugins/` – must-use plugins (if added)
 - `CLAUDE.md` – AI assistant context
